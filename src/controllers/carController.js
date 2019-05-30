@@ -111,6 +111,7 @@ module.exports = (() => {
 
         if (validator.isFormValid()) {
             notificator.showLoading();
+            delete carData.id;
             carData = validator.escapeSpecialChars(carData, ['price', 'year']);
             carData.seller = storage.getData('username');
             carModel.editCar(carData)
