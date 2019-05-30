@@ -1,0 +1,24 @@
+{{> navigation}}
+<div class="listing-details">
+    <div class="my-listing-details">
+        <p id="auto-title">{{carData.title}}</p>
+        <img src="{{carData.imageUrl}}">
+        <div class="listing-props">
+            <h2>Brand: {{carData.brand}}</h2>
+            <h3>Model: {{carData.model}}</h3>
+            <h3>Year: {{carData.year}}</h3>
+            <h3>Fuel: {{carData.fuelType}}</h3>
+            <h3>Price: {{carData.price}} $</h3>
+        </div>
+        {{#if (isAuthor carData._acl.creator)}}
+            <div class="listings-buttons">
+                <a href="#/car/edit/{{carData._id}}" class="button-list">Edit</a>
+                <a href="#/car/delete/{{carData._id}}" class="button-list">Delete</a>
+            </div>
+        {{/if}}
+        <p id="description-title">Description:</p>
+        <p id="description-para">{{carData.description}}</p>
+
+    </div>
+</div>
+{{> footer}}

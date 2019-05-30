@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.feedback {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.text-danger {
+    color: red;
+}
+
+/*a {*/
+    /*text-decoration: none !important;*/
+/*}*/
