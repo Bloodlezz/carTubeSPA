@@ -19,7 +19,7 @@ module.exports = (() => {
     }
 
     function editCar(carData) {
-        return requester.update('appdata', `cars/${carData.id}`, 'kinvey', carData);
+        return requester.update('appdata', `cars/${carData._id}`, 'kinvey', carData);
     }
 
     function deleteCar(id) {
